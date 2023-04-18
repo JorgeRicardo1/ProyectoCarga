@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Subir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card" style="margin-top:50px">
+            <div class="card-header bg-primary text-white">
+                <h4>Cargar archivo</h4>
+            </div>
+            <div class="card-body">
+                <form action="@Url.Action("SubirArchivo","Archivo")" method="post" enctype="multipart/form-data">
+                    <div class="form-label">
+                        <label>Nombre:</label>
+                        <input class="form-control" name="Nombre" type="text" autocomplete="off" />
+                    </div>
+                    <div class="form-label">
+                        <label >Archivo:</label>
+                        <input name="Archivo" type="file" autocomplete="off" />
+                    </div>
+                    <button class="btn btn-success" type="submit">Subir Archivo</button>
+                    <a class="btn btn-warning" href="@Url.Action("Index","Archivo")">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
